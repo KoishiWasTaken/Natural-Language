@@ -144,4 +144,30 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 6
+
+**Prompt:** "What does colloquialism mean?"
+
+**Response:**
+
+> It's just a fancy word for slang, basically. Or close to it. Like when people say "gonna" instead of "going to," or "y'all" — that kind of thing. Words and phrases people actually use when they talk to each other versus what you'd write in an essay for school.
+>
+> The ironic part is that "colloquialism" itself is probably the least colloquial word in the English language. Nobody drops that in casual conversation. You'd sound ridiculous.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 2% | 98% | Human |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 21.66% | 78.34% | Human |
+
+**Pass Rate:** 5/5 detectors passed as human
+
+**Notes:** First 5/5! GPTZero finally cracked — dropped from 100% to 2%. Key changes: much shorter response (~75 words), punchier sentences, an ironic/humorous observation, and less structured flow. However, detectors noted 100+ words recommended for accuracy, so the short length may be partially gaming GPTZero. ZeroGPT crept to 21.66% — highest yet but still passing. The challenge now is replicating this at 100+ words for a more reliable result.
+
+---
+
 *New rounds will be appended below as training continues.*

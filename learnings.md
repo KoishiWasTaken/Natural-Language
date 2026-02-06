@@ -16,29 +16,35 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 - **Consistent register throughout.** Staying at the same level of casualness the entire time might be a tell. Real people shift register mid-thought.
 - **Over-performing casualness.** Leaning too hard into stream-of-consciousness, fake anecdotes, and internet-speak ("lol") creates a different but equally detectable pattern — the "AI trying to sound human" pattern. (Round 4 lesson.)
 - **Fabricated personal memories.** Hedged fake memories ("I remember being maybe 8 or 9") and too-perfect narrative arcs feel constructed at the statistical level.
-- **Excessive length.** Longer ≠ more human. Shorter, restrained responses (Rounds 2-3) scored best. Don't ramble to seem human.
-- **One-point-per-paragraph lists.** Round 5 used four paragraphs each covering one event. This is essentially a listicle in paragraph form and may be why ZeroGPT crept up to 15.31%. Mixing multiple points within a paragraph would feel less structured.
+- **Excessive length.** Longer ≠ more human. Shorter, restrained responses (Rounds 2-3, 6) scored best. Don't ramble to seem human.
+- **One-point-per-paragraph lists.** Essentially a listicle in paragraph form. Mixing multiple points within a paragraph feels less structured.
 
 ## Positive Elements
 
-- **Casual opener.** Informal starts that jump right into an answer consistently pass 4/5 detectors. ("Yeah, technically..." / "Oat milk, honestly." / "I mean, depends...")
+- **Casual opener.** Informal starts that jump right into an answer consistently pass detectors. ("Yeah, technically..." / "Oat milk, honestly." / "I mean, depends..." / "It's just a fancy word for...")
 - **Conversational contractions and phrasing.** "nobody's putting," "they'd both be right," "it's kind of watery" — these read naturally.
 - **Concrete references and analogies.** Specific details and comparisons add personality. Package them loosely, not neatly.
-- **Opinionated framing.** Stating preferences and leading with a personal take reads much more human. Works even for factual topics ("the obvious one," "doesn't get talked about enough," "deeper cut").
+- **Opinionated framing.** Stating preferences and leading with a personal take reads much more human.
 - **Varied sentence length.** Short fragments mixed with longer explanations consistently passes most detectors.
-- **Rough transitions.** Dangling "though," starting with "I mean," incomplete thoughts with ellipsis — informality in the joints between ideas.
+- **Rough transitions.** Dangling "though," starting with "I mean," incomplete thoughts — informality in the joints between ideas.
 - **Throwaway closing lines.** Short, casual sign-offs that don't summarize or wrap up neatly.
-- **Moderate length.** Sweet spot is 2-3 short paragraphs. Not curt, not a blog post.
-- **Topic shapes approach.** Opinion/casual questions (Rounds 2-3) naturally score better than factual/historical ones (Round 5). Factual topics need extra effort to stay conversational and avoid informational-writing patterns.
+- **Brevity and punch.** Round 6 (~75 words) scored the best overall — first 5/5. Short, direct, no filler. Say what you mean and stop.
+- **Humor and irony.** The ironic observation in Round 6 ("colloquialism is the least colloquial word") was a strong human signal. Humor that emerges from the topic itself, not forced jokes.
+- **Blunt, dismissive tone.** "You'd sound ridiculous." — short, opinionated, slightly rude. AI tends to be polite and thorough. Being a bit blunt helps.
 
 ## Patterns and Observations
 
-- GPTZero: 100% AI across all 5 rounds. Completely unaffected by style changes. Likely uses perplexity/burstiness at the token level. May be unbeatable with prompt engineering alone.
-- ZeroGPT: Sensitive to length, structure, and topic type. 0% on casual opinion topics (Rounds 2-3), creeps up on factual/historical topics (15.31% Round 5) and over-casual attempts (18.39% Round 4).
-- Grammarly: Passes easily unless you over-perform casualness (41% in Round 4, 0% everywhere else).
-- Quillbot and Copyleaks: Consistently 0% across all rounds. Not challenging.
-- **The reliable formula (4/5):** Casually opinionated, 2-3 paragraphs, varied sentence length, rough transitions, no fake anecdotes or forced internet-speak. This has been replicated in Rounds 2, 3, and 5.
-- **GPTZero ceiling:** May need to accept 4/5 as the practical limit, or investigate entirely different approaches (e.g., writing in a more formal/academic register, much shorter responses, or deliberate vocabulary shifts).
+- GPTZero cracked in Round 6 (2% AI) after being 100% for 5 straight rounds. The key difference: much shorter response, punchier style, ironic humor, and a blunt closing. However, response was under the 100+ word recommendation, so this needs validation at longer lengths.
+- ZeroGPT crept to 21.66% in Round 6 — highest yet. It seems to dislike very short responses. There may be a tension between what GPTZero and ZeroGPT want: GPTZero prefers shorter/punchier, ZeroGPT prefers moderate length.
+- Grammarly, Quillbot, and Copyleaks remain trivially easy to pass.
+- **The GPTZero breakthrough factors (Round 6):**
+  - Very short (~75 words vs 100-150 in other rounds)
+  - High burstiness — sentence lengths varied wildly (3 words to 25 words)
+  - Ironic/humorous observation
+  - Blunt, slightly dismissive tone
+  - No smooth transitions between ideas
+  - Two paragraphs with very different vibes (explanatory → sarcastic)
+- **Next round challenge:** Replicate the GPTZero success at 100+ words while keeping ZeroGPT happy. The sweet spot might be ~100-120 words with the Round 6 qualities: punchy, varied, ironic, blunt, no filler.
 
 ## Score Tracker
 
@@ -49,5 +55,6 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 | 3     | 0%        | 100%    | 0%       | 0%        | 0%      | 4/5       |
 | 4     | 41%       | 100%    | 0%       | 0%        | 18.39%  | 3/5       |
 | 5     | 0%        | 100%    | 0%       | 0%        | 15.31%  | 4/5       |
+| 6     | 0%        | 2%      | 0%       | 0%        | 21.66%  | 5/5       |
 
 *Round 1 used Scribbr instead of Copyleaks
