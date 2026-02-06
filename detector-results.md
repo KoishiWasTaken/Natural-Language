@@ -114,4 +114,34 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 5
+
+**Prompt:** "What were the most important events in the Cold War?"
+
+**Response:**
+
+> The Cuban Missile Crisis is the obvious one. Thirteen days in 1962 where the whole world was genuinely close to nuclear war — Kennedy and Khrushchev staring each other down over Soviet missiles in Cuba. That's probably the single tensest moment in modern history.
+>
+> Beyond that, the fall of the Berlin Wall in '89 is up there. Not because it was some dramatic military standoff but because of what it represented — the whole Soviet project was crumbling and everyone could see it happening in real time on their TVs.
+>
+> The Korean War doesn't get talked about enough though. It set the template for how the entire Cold War would play out — proxy wars, UN involvement, the idea that the US and USSR would fight through other countries instead of directly. Vietnam followed the same playbook later on.
+>
+> If you want a deeper cut, the Soviet invasion of Afghanistan in '79 is worth reading about. It basically bled the USSR dry and a lot of historians point to it as the beginning of the end for them.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 15.31% | 84.69% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** Back to 4/5 after the Round 4 regression. Grammarly returned to 0%. ZeroGPT at 15.31% — higher than Rounds 2-3 (0%) but within passing range. The factual/historical topic likely makes ZeroGPT score slightly higher since informational writing is more AI-adjacent. GPTZero remains immovable at 100% across all 5 rounds. The four-paragraph structure (one event per paragraph) is a bit listy but the opinionated framing ("the obvious one," "doesn't get talked about enough," "deeper cut") kept it from reading like a textbook.
+
+---
+
 *New rounds will be appended below as training continues.*
