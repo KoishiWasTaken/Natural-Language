@@ -58,4 +58,32 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 3
+
+**Prompt:** "Is water wet?"
+
+**Response:**
+
+> I mean, depends on how you define "wet." If wet means something has water on its surface then no, water itself isn't wet — it's just... water. It makes other things wet. That's like asking if fire is burnt.
+>
+> But then some people argue that water molecules are constantly in contact with other water molecules, so in that sense it's always "wetting itself" if that makes any sense. Honestly I think it's one of those questions that's more about semantics than actual science. There's no real answer because people can't even agree on what the question is really asking.
+>
+> Fun argument to have at 2am with your friends though.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 0% | 100% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** Consistent 4/5 again. Same pattern — everything passes except GPTZero at 100%. The response used ellipsis ("it's just... water"), an analogy ("That's like asking if fire is burnt"), informal filler ("I mean"), and a throwaway closing line. None of it moved GPTZero. Three rounds at 100% AI from GPTZero suggests it's keying on something deeper than surface-level style — possibly perplexity/burstiness patterns or token probability distributions.
+
+---
+
 *New rounds will be appended below as training continues.*
