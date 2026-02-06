@@ -203,4 +203,32 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 8
+
+**Prompt:** "What should I do during Ramadan?"
+
+**Response:**
+
+> Depends on whether you're Muslim or not, honestly. If you are, the main thing is fasting from sunrise to sunset — no food, no water during daylight hours. You break the fast at sundown, usually with dates and water first, then a bigger meal called iftar. A lot of families make it a whole event, cooking together and having people over.
+>
+> If you're not Muslim but want to be respectful, just don't eat or drink in front of someone who's fasting. It's not the end of the world if you do, most people won't say anything, but it's a nice thing to be aware of. And don't ask "not even water?" — they've heard it a thousand times.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 65.55% | 34.45% | AI |
+
+**Pass Rate:** 3/5 detectors passed as human
+
+**Notes:** GPTZero back to 100% at 120+ words, confirming the Round 6 short-length caveat. ZeroGPT spiked to 65.55%, second-worst ever. The clean two-paragraph split (Muslim vs non-Muslim) is too organized. Em dashes used heavily throughout, which is a major AI tell per user feedback: most humans don't know how to type em dashes and rarely use them. Cultural/educational topics may inherently score higher like factual/historical ones.
+
+**User feedback:** Avoid em dashes entirely. Most people can't type them on a keyboard and almost nobody uses them in casual writing.
+
+---
+
 *New rounds will be appended below as training continues.*
