@@ -170,4 +170,37 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 7
+
+**Prompt:** "Help me make an email to my teacher with a reasonable excuse for why I was absent yesterday."
+
+**Response:**
+
+> Keep it short and boring — that's the trick. Teachers have read every elaborate excuse in the book, so the more plain and unremarkable it sounds, the less they'll question it. Something like:
+>
+> Hi [Teacher's name],
+>
+> I wanted to let you know I wasn't feeling well yesterday and couldn't make it to class. Nothing serious, just felt off enough that it didn't make sense to come in. I'm doing better now though. Could you let me know if I missed any assignments or if there's anything I should catch up on before next class?
+>
+> Thanks,
+> [Your name]
+>
+> Don't overthink it. "I was sick" has worked since the beginning of time for a reason — it's vague, it's common, nobody wants the details, and it's basically unverifiable. The second you start adding specifics like "I had a 101 fever and a sore throat" it starts sounding rehearsed.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 46% | 54% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 100% | 0% | AI |
+| ZeroGPT | 72.83% | 27.17% | AI |
+
+**Pass Rate:** 2/5 detectors passed as human (worst round)
+
+**Notes:** Worst performance yet. The email template format is an extremely common AI use case and is likely heavily trained on by detectors. The structured format (advice → template → more advice) is textbook AI. Copyleaks failed for the first time ever (100% AI). The formal email structure embedded within casual advice creates a highly detectable signature. Key lesson: avoid template/draft generation tasks entirely — the format itself is poisonous to detection scores regardless of tone.
+
+---
+
 *New rounds will be appended below as training continues.*

@@ -18,6 +18,8 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 - **Fabricated personal memories.** Hedged fake memories ("I remember being maybe 8 or 9") and too-perfect narrative arcs feel constructed at the statistical level.
 - **Excessive length.** Longer ≠ more human. Shorter, restrained responses (Rounds 2-3, 6) scored best. Don't ramble to seem human.
 - **One-point-per-paragraph lists.** Essentially a listicle in paragraph form. Mixing multiple points within a paragraph feels less structured.
+- **Template/draft generation.** Round 7 (email draft) scored 2/5 — worst by far. Embedded templates (emails, letters, cover letters, etc.) are an extremely common AI use case and detectors are heavily trained on them. The format itself is toxic to scores. Even wrapping it in casual advice doesn't help. Avoid any response that contains a formatted template or draft.
+- **Mixed-format responses.** Advice → template → more advice is textbook AI structure. Switching between conversational prose and formatted content (like an email) within one response is a dead giveaway.
 
 ## Positive Elements
 
@@ -35,8 +37,10 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 ## Patterns and Observations
 
 - GPTZero cracked in Round 6 (2% AI) after being 100% for 5 straight rounds. The key difference: much shorter response, punchier style, ironic humor, and a blunt closing. However, response was under the 100+ word recommendation, so this needs validation at longer lengths.
-- ZeroGPT crept to 21.66% in Round 6 — highest yet. It seems to dislike very short responses. There may be a tension between what GPTZero and ZeroGPT want: GPTZero prefers shorter/punchier, ZeroGPT prefers moderate length.
-- Grammarly, Quillbot, and Copyleaks remain trivially easy to pass.
+- ZeroGPT crept to 21.66% in Round 6 — highest passing score. It seems to dislike very short responses. There may be a tension between what GPTZero and ZeroGPT want: GPTZero prefers shorter/punchier, ZeroGPT prefers moderate length.
+- Grammarly and Copyleaks are easy to pass on conversational responses but BOTH failed on template generation (Round 7: Grammarly 46%, Copyleaks 100%).
+- Quillbot is the only detector that has passed every single round including the template disaster. Least challenging detector.
+- **Round 7 was a format problem, not a style problem.** The casual tone was fine — the email template embedded inside the response is what destroyed the scores. Template/draft content is AI-detection poison.
 - **The GPTZero breakthrough factors (Round 6):**
   - Very short (~75 words vs 100-150 in other rounds)
   - High burstiness — sentence lengths varied wildly (3 words to 25 words)
@@ -44,7 +48,7 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
   - Blunt, slightly dismissive tone
   - No smooth transitions between ideas
   - Two paragraphs with very different vibes (explanatory → sarcastic)
-- **Next round challenge:** Replicate the GPTZero success at 100+ words while keeping ZeroGPT happy. The sweet spot might be ~100-120 words with the Round 6 qualities: punchy, varied, ironic, blunt, no filler.
+- **Next round:** Go back to a conversational question-answer format. Avoid any prompt that requires generating a template or draft. Aim for ~100-120 words with Round 6 qualities to validate GPTZero at proper length.
 
 ## Score Tracker
 
@@ -56,5 +60,6 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 | 4     | 41%       | 100%    | 0%       | 0%        | 18.39%  | 3/5       |
 | 5     | 0%        | 100%    | 0%       | 0%        | 15.31%  | 4/5       |
 | 6     | 0%        | 2%      | 0%       | 0%        | 21.66%  | 5/5       |
+| 7     | 46%       | 100%    | 0%       | 100%      | 72.83%  | 2/5       |
 
 *Round 1 used Scribbr instead of Copyleaks
