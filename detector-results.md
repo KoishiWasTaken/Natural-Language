@@ -30,4 +30,32 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 2
+
+**Prompt:** "What's a good alternative to milk if I'm lactose intolerant?"
+
+**Response:**
+
+> Oat milk, honestly. It's the closest thing I've found to actual milk in terms of how it feels in coffee or cereal. Not too thin, not weird and chalky like some of the others.
+>
+> Almond milk is fine too but it's kind of watery if you're used to whole milk. Some people swear by coconut milk — I think it's too sweet for most stuff but it works great in smoothies or curry.
+>
+> Really depends on what you're using it for though. Like if you're baking, oat or soy are probably your best bet since they behave more like real milk when heated. If you just want something to drink straight, try a few and see what you actually like. They all taste pretty different from each other.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 0% | 100% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** Big improvement — ZeroGPT went from 88.62% AI to 0%. The varied sentence lengths, opinionated tone ("honestly," "I think"), and less-organized structure worked. GPTZero remains the only failure at 100% AI. Swapped Scribbr for Copyleaks since Scribbr uses Quillbot's engine.
+
+---
+
 *New rounds will be appended below as training continues.*
