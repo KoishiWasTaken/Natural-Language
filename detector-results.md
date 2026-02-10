@@ -283,4 +283,32 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 11
+
+**Prompt:** "Write a short report on the long-term effects of the Cold War."
+
+**Response:**
+
+> Honestly the biggest lasting effect of the Cold War is that it turned the entire world into a chessboard that the US and Russia are still playing on. A lot of the conflicts we see today, stuff in the Middle East, tensions with China, the mess in Eastern Europe, you can trace most of it back to alliances and grudges that formed between 1947 and 1991.
+>
+> The nuclear paranoia never fully went away either. We just stopped talking about it. There are still thousands of warheads sitting in silos and the treaties that used to keep them in check have been falling apart over the last decade or so. People forgot how scary that is because they got used to it.
+>
+> Then there's the economic side. The Marshall Plan basically built modern Western Europe, and countries that ended up on the Soviet side of things spent decades trying to catch up after the wall came down. Some of them still haven't.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 0% | 100% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** ZeroGPT at 0% on a factual topic for the first time ever. The opinionated framing ("Honestly the biggest lasting effect...") and casual language on factual content cracked ZeroGPT even on a "report" prompt. GPTZero still 100% though. At 145 words this is over the ideal 100-110 range. The three paragraphs (geopolitical, nuclear, economic) are still somewhat listy but the opinionated/casual framing kept ZeroGPT happy. GPTZero may be fundamentally harder on factual content regardless of framing.
+
+---
+
 *New rounds will be appended below as training continues.*

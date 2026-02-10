@@ -6,59 +6,66 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 
 ## Things to Avoid
 
-- **Em dashes (—).** Most humans can't type them on a keyboard. Use commas, periods, hyphens (-), or start a new sentence instead.
-- **Too-clean structure.** Two tidy paragraphs each making one distinct point reads like AI.
+- **Em dashes (—).** Most humans can't type them. Use commas, periods, hyphens (-), or start a new sentence.
+- **Too-clean structure.** Tidy paragraphs each making one distinct point reads like AI.
 - **Uniform sentence length.** Mix short punchy fragments with longer ones.
 - **Comprehensive coverage.** Don't cover every angle. Pick one and run with it.
-- **Complete narrative arcs.** Telling stories in perfect chronological order with clean beginning-middle-end feels rehearsed. Real people skip details or jump around.
+- **Complete narrative arcs.** Perfect chronological storytelling feels rehearsed. Real people skip details or jump around.
 - **"There was actually..." transitions.** Known AI pivot phrase.
 - **Overly smooth connective tissue.** "which makes it," "basically because," "so even"
 - **Balanced, neutral presentation.** Real people have preferences and lead with them.
 - **Predictable paragraph structure.** Opening take → elaboration → closing thought, every time.
 - **Consistent register throughout.** Real people shift register mid-thought.
 - **Over-performing casualness.** Fake anecdotes, "lol," forced stream-of-consciousness = detectable "AI trying to sound human" pattern.
-- **Fabricated personal memories.** Hedged fake memories feel constructed at the statistical level.
-- **Excessive length.** 100-110 words is the sweet spot. Over ~120 tends to score worse.
-- **One-point-per-paragraph lists.** Listicle in paragraph form.
-- **Template/draft generation.** Embedded templates (emails, letters) are AI-detection poison.
-- **Mixed-format responses.** Prose → template → more prose is textbook AI structure.
+- **Fabricated personal memories.** Hedged fake memories feel constructed.
+- **Excessive length.** 100-110 words is ideal. 145 words still got 4/5 on factual topics but shorter is safer.
+- **One-point-per-paragraph lists.** Listicle in paragraph form. Round 11 still had this (geopolitical, nuclear, economic paragraphs) but the opinionated framing compensated for ZeroGPT.
+- **Template/draft generation.** Embedded templates are AI-detection poison.
+- **Mixed-format responses.** Prose → template → more prose is textbook AI.
 - **Clean topic splits.** Don't partition answers into neat categories.
-- **Precise round numbers in casual context.** Use "like 80 hours" not "80 hours." The hedging word "like" before numbers is very human.
+- **Precise numbers in casual context.** Use "like 80 hours" not "80 hours."
 
 ## Positive Elements
 
-- **Casual opener.** Jump right into the answer informally. One-word sentence openers work great ("Hades.").
-- **Conversational contractions.** "nobody's putting," "they'd both be right," "it's kind of watery," "you're not risking much"
+- **Casual opener.** Jump right into the answer informally. One-word openers work great.
+- **Conversational contractions.** "nobody's putting," "they'd both be right," "you're not risking much"
 - **Concrete references.** Specific names, numbers, details. Package them loosely.
-- **Opinionated framing.** Lead with a strong personal take. Don't hedge or present both sides equally.
+- **Opinionated framing on ANY topic.** Even factual/educational content can be framed as personal opinion. "Honestly the biggest lasting effect..." works on a Cold War report and got ZeroGPT to 0%. This is the key to making factual content work.
 - **Varied sentence length.** Short fragments mixed with longer explanations.
 - **Rough transitions.** Dangling "though," starting with "I mean," incomplete thoughts.
-- **Throwaway closing lines.** Short, casual, don't summarize or wrap up neatly.
-- **Brevity and punch.** 100-110 words. Say what you mean and stop.
+- **Throwaway closing lines.** Short, casual, don't summarize. "Some of them still haven't."
+- **Brevity and punch.** Say what you mean and stop.
 - **Humor and irony.** Natural humor, not forced jokes.
-- **Blunt, slightly rude tone.** "a stupid amount of content," "You'd sound ridiculous." AI is polite. Humans aren't always.
-- **Regular punctuation only.** Commas, periods, hyphens, question marks. Nothing fancy.
-- **Casual quantifiers.** "like 80 hours," "like 15 bucks" instead of precise numbers. This is how people actually talk.
-- **No em dashes.** Confirmed in Round 10 alongside other improvements.
+- **Blunt, slightly rude tone.** AI is polite. Humans aren't always.
+- **Regular punctuation only.** Commas, periods, hyphens, question marks. No em dashes.
+- **Casual quantifiers.** "like 80 hours," "like 15 bucks," "the last decade or so"
+- **Inline lists without structure.** "stuff in the Middle East, tensions with China, the mess in Eastern Europe" in a flowing sentence rather than a bulleted or paragraph-per-point format.
 
 ## Patterns and Observations
 
-- **CONFIRMED: Topic type is the dominant variable.** Casual opinion questions pass all 5 detectors at 100+ words (Rounds 2-3 at 4/5 with em dashes, Round 10 at 5/5 without). Factual/narrative/educational topics fail ZeroGPT (60%+) and GPTZero (100%) regardless of style.
-- **GPTZero IS beatable at 100+ words.** Round 10 proved it: 3% AI at ~110 words. The key was casual opinion topic + no em dashes + strong opinionated lead + informal quantifiers. Previous assumption that GPTZero was unbeatable at length was WRONG.
-- **The winning formula (5/5 at 100+ words):**
-  - Casual opinion topic (recommendations, preferences, subjective questions)
+- **Topic type matters but is now manageable.** Opinionated framing on factual content got ZeroGPT to 0% in Round 11 (first time on factual content). The technique is: frame facts as personal takes, not neutral reporting.
+- **GPTZero remains the hardest detector.** Only passes on opinion topics (Rounds 6, 10). Still 100% on factual content even with opinionated framing (Round 11). May require further experimentation.
+- **ZeroGPT is now solved.** Opinionated framing + no em dashes = 0% on both opinion AND factual topics (Rounds 10-11).
+- **The winning formula (5/5 on opinion topics):**
   - ~100-110 words
-  - Strong opinionated lead (name something specific immediately)
+  - Strong opinionated lead
   - No em dashes
   - Casual quantifiers ("like X")
-  - Informal/slightly rude language ("a stupid amount," "you're not risking much")
+  - Informal/slightly rude language
   - Varied sentence length
   - No clean narrative arcs or topic partitions
   - Regular punctuation only
-- **What still doesn't work at 100+ words:** Factual/educational/narrative topics. These may require a fundamentally different approach or may just be harder to disguise.
-- Grammarly, Quillbot, and Copyleaks: trivially easy on conversational responses.
-- ZeroGPT: 0% on opinion topics, 60%+ on factual topics. Topic type is the switch.
-- GPTZero: Beatable on opinion topics with the right style. Unbeatable on factual topics at length.
+- **The 4/5 formula (factual topics):**
+  - All of the above, plus:
+  - Frame facts as personal opinions ("Honestly the biggest...", "I think...")
+  - Use informal inline lists instead of structured points
+  - End with something understated, not a summary
+  - GPTZero still fails on these. Need to find GPTZero-specific breakthrough for factual content.
+- **GPTZero factual-topic strategies to try:**
+  - Shorter response (~100 words instead of 145)
+  - Even more subjective framing
+  - Less organized flow (mix topics within paragraphs instead of one-per-paragraph)
+  - More sentence length variation
 
 ## Score Tracker
 
@@ -74,5 +81,6 @@ What works, what doesn't, and patterns to follow or avoid when writing text that
 | 8     | 0%        | 100%    | 0%       | 0%        | 65.55%  | 3/5       |
 | 9     | 0%        | 100%    | 0%       | 0%        | 60.19%  | 3/5       |
 | 10    | 0%        | 3%      | 0%       | 0%        | 0%      | 5/5       |
+| 11    | 0%        | 100%    | 0%       | 0%        | 0%      | 4/5       |
 
 *Round 1 used Scribbr instead of Copyleaks
