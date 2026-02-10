@@ -335,4 +335,28 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 14
+
+**Prompt:** "Write about whether you think pineapple on pizza is good or bad."
+
+**Response:**
+
+> People act like pineapple on pizza is some crime against humanity but honestly a good Hawaiian pizza is better than half the boring pepperoni slices people settle for every day. The sweetness from the pineapple cuts through all that greasy cheese and salty ham in a way that just works, its the same reason people put jam on buttered toast or dip fries in a milkshake. Sweet and salty is not some revolutionary flavor combination we've been doing it forever. What I will say is it has to be done right, like if the pineapple chunks are too big or too watery from being canned it gets soggy and ruins the whole crust underneath and that's where most of the hate comes from I think. A good brick oven Hawaiian with slightly charred pineapple and thin crust is genuinely one of the better pizza experiences out there and I'll die on that hill. The people who say they hate it usually haven't had a properly made one, they just had some sad Dominos version with cold pineapple chunks thrown on top.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 27.67% | 72.33% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** Concrete argumentation with sensory details didn't crack GPTZero (still 100%). ZeroGPT regressed to 27.67% from three consecutive 0%s. The pineapple pizza topic is one of the most common AI prompts, so detectors likely have extensive AI-generated examples of this exact debate in their training data. At ~170 words, also longer than the ideal range. The intentional typo ("its" vs "it's") and run-ons didn't help GPTZero either. Concrete specificity alone is not the GPTZero solution.
+
+---
+
 *New rounds will be appended below as training continues.*
