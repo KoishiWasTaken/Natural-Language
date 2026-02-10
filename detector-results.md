@@ -311,4 +311,28 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 12
+
+**Prompt:** "Write about what motivates people to work a full-time shift every week."
+
+**Response:**
+
+> Most people work full-time because they literally have to, that's the honest answer and everything else is secondary. You've got rent, groceries, car payments, insurance, and none of that waits around for you to find your passion. But beyond just keeping the lights on there's something about having a routine that keeps people sane, like even the people who complain about their 9 to 5 every single day would probably lose it after a month of doing nothing. I've seen people retire and completely fall apart because they don't know what to do with themselves anymore. There's also the social aspect that nobody really talks about, your coworkers become the people you spend more time with than your actual family and that sense of belonging matters even if the job itself is mind-numbing. Some people genuinely love what they do obviously but I think for most of us it comes down to needing structure and not wanting to feel useless more than anything else.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 0% | 100% | Human |
+
+**Pass Rate:** 4/5 detectors passed as human
+
+**Notes:** Single continuous paragraph (~160 words), comma splices, run-ons, chained thoughts, no em dashes. ZeroGPT at 0% for the third straight round, confirming that's solved. GPTZero still 100% despite the single-paragraph format. Paragraph breaks were NOT the key GPTZero variable. Compared to the student essay (7% GPTZero), this response is more abstract/philosophical while the essay was concrete and argumentative with specific comparisons. GPTZero may respond better to concrete specificity and genuine argumentative structure vs. general philosophical musing.
+
+---
+
 *New rounds will be appended below as training continues.*
