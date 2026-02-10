@@ -231,4 +231,30 @@ Tracking results from AI text detectors across training rounds.
 
 ---
 
+## Round 9
+
+**Prompt:** "What is the Nutty Putty Cave?"
+
+**Response:**
+
+> It's a cave in Utah that got permanently sealed off after a guy died inside it back in 2009. John Jones, I think his name was. He crawled into a passage that was way too narrow and got stuck upside down. Rescue teams worked on him for over a day but they couldn't get him out. He died down there, and instead of recovering his body they just sealed the whole cave with concrete.
+>
+> The whole thing is genuinely horrifying to read about. Like, he was alive and conscious for most of it, just stuck at a downward angle with blood rushing to his head. They actually got close to pulling him out at one point but a pulley broke and he slid back in deeper. I don't know how anyone goes caving after hearing that story.
+
+**Detector Results:**
+
+| Detector | AI Score | Human Score | Verdict |
+|----------|----------|-------------|---------|
+| Grammarly | 0% | 100% | Human |
+| GPTZero | 100% | 0% | AI |
+| Quillbot | 0% | 100% | Human |
+| Copyleaks | 0% | 100% | Human |
+| ZeroGPT | 60.19% | 39.81% | AI |
+
+**Pass Rate:** 3/5 detectors passed as human
+
+**Notes:** No em dashes this time, but ZeroGPT only dropped from 65.55% to 60.19%. Marginal improvement, so em dashes weren't the main ZeroGPT problem. The response is a well-organized narrative retelling (~130 words, over the 100-110 target). Two clean paragraphs: "what happened" then "why it's scary." Still too structured. Also, telling a complete story with a clear arc (stuck → rescue attempt → pulley broke → sealed) is a very AI way to relay events. Real people would be messier, skip details, or get parts wrong. GPTZero still 100%.
+
+---
+
 *New rounds will be appended below as training continues.*
